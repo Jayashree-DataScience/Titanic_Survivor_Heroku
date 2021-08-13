@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<style>
+body{
+    background-color: #d9d9d9;
+}
+form {
+    margin: auto;
+    width: 35%;
+}.result {
+    margin: auto;
+    width: 35%;
+    border: 1px solid #ccc;
+}
+</style><head>
+    <title>Titanic Model Example</title>
+</head>
+<center>
+<br>
+This is a sample model to to predict the survival of a person on the Titanic
+<br>
+</center>
+<form action="{{ url_for('main') }}" method="POST">
+    <fieldset>
+        <legend>Input values:</legend>
+
+        Ticket Class (1, 2, 3):
+        <input name="Pclass" type="number" required>
+        <br>
+        <br> Age:
+        <input name="Age" type="number" required>
+        <br>
+        <br> Sex (M or F, defaults to M):
+        <input name="Sex" type="text" required>
+        <br>
+        <br> Number of Siblings aboard:
+        <input name="SibSp" type="number" required>
+        <br>
+        <br> Number of Parents/Children aboard:
+        <input name="Parch" type="number" required>
+        <br>
+        <br> Fare (price of ticket, a number):
+        <input name="Fare" type="number" required>
+        <br>
+        <br> Embarked: Port of Embarkation (C = Cherbourg; Q = Queenstown; S = Southampton)
+             Input value 1 to select a particular option, C=1 when Q=0 and S=0
+        <br> Enter Embarked_Q (0/1)
+        <input name="Embarked_Q" type="number" required>
+         <br>
+         <br> Enter Embarked_S (0/1)
+        <input name="Embarked_S" type="number" required>
+        <br>
+       <br>
+        <input type="submit">
+    </fieldset>
+</form>
+</html>
